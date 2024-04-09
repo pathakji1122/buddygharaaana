@@ -112,7 +112,7 @@ const EntryGate = () => {
         <Button
             disableElevation
             variant="contained"
-            onClick={() => handleClick(samrat)}
+            onClick={() => handleClick(SamratShop)}
             style={{
                 textTransform: 'none',
                 width: '100%',
@@ -143,7 +143,7 @@ const EntryGate = () => {
         <Button
             disableElevation
             variant="contained"
-            onClick={() => handleClick(joydip)}
+            onClick={() => handleClick(JoyDip)}
             style={{
                 textTransform: 'none',
                 width: '100%',
@@ -174,7 +174,7 @@ const EntryGate = () => {
         <Button
             disableElevation
             variant="contained"
-            onClick={() => handleClick(john)}
+            onClick={() => handleClick(JohnRestaurant)}
             style={{
                 textTransform: 'none',
                 width: '100%',
