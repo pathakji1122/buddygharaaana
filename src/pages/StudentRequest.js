@@ -108,10 +108,17 @@ const StudentRequest = () => {
      <Typography variant="body1" color="text.primary" sx={{ fontFamily: 'Cursive', fontWeight: 'bold', marginBottom: '10px' }}>
        <span style={{ fontSize: '0.8rem', marginRight: '5px', color: '#333', fontWeight: 'bold' }}>Order Time:</span> {order.orderTime}
      </Typography>
+    
+     {order.orderStatus !== 'NOT_ACCEPTED' && (
+  <Typography variant="body1" color="text.primary" sx={{ fontFamily: 'Cursive', fontWeight: 'bold', marginBottom: '10px' }}>
+    <span style={{ fontSize: '0.8rem', marginRight: '5px', color: '#333', fontWeight: 'bold' }}>Your Buddy:</span> {order.buddy.name} ,  {order.buddy.phoneNo}
+  </Typography>
+)}
      <Typography variant="body1" color="text.primary" sx={{ fontFamily: 'Cursive', fontWeight: 'bold', marginBottom: '10px' }}>
   <span style={{ fontSize: '0.8rem', marginRight: '5px', color: '#333', fontWeight: 'bold' }}>Order Status:</span>
   {order.orderStatus === 'NOT_ACCEPTED' ? 'Placed' : order.orderStatus === 'COMPLETED' ? 'Completed' : 'Accepted'}
 </Typography>
+
 
 
    </CardContent>

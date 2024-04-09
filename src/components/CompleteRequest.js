@@ -38,7 +38,7 @@ const CompleteRequest = ({ orderId }) => {
     try {
       const authToken = Cookies.get("authToken");
       const response = await axios.post(
-        'http://localhost:8081/engineering/completerequest',
+        'https://gharaanah.onrender.com/engineering/completerequest',
         order,
         {
           headers: {
@@ -47,7 +47,7 @@ const CompleteRequest = ({ orderId }) => {
           },
         }
       );
-      if(response.data.status === true){
+      if(response.data.action === true){
         setCompleted(true);
         console.log("Order completed successfully", response.data);
       } else {

@@ -14,6 +14,7 @@ import CheckRequest from "./pages/CheckRequest";
 import BuddyRequests from "./pages/BuddyRequests";
 import StudentRequest from "./pages/StudentRequest";
 import StudentProfile from "./pages/StudentProfile";
+import Rewards from "./pages/Rewards";
 function App() {
   const [userStage, setUserStage] = useState(0);
   useEffect(() => {
@@ -71,6 +72,7 @@ function App() {
         <Route path="/buddyrequest" element={<BuddyRequests/>}/> 
         <Route path="/studentrequest" element={<StudentRequest/>}/>
         <Route path="/profile" element={<StudentProfile/>}/>
+        <Route path="/rewards" element={<Rewards/>}/>
       </Routes>
     </>
   );

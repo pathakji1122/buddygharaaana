@@ -55,7 +55,7 @@ const StudentProfile = () => {
                   <div style={{ display: "flex", alignItems: "center" }}>
                     
                     <Typography variant="subtitle1">
-                      Coins: {profile.coin}
+                     Hostel: {profile.hostel}
                     </Typography>
                   </div>
                 </>

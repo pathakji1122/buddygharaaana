@@ -17,7 +17,7 @@ const StudentNavbar = () => {
   const pages = [
     { label: "Home", path: "/" },
     { label: "Requests for you", path: "/checkrequest" },
-    { label: "Rewards", path: "/" },  
+    { label: "Rewards", path: "/rewards" },  
   ];
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
