@@ -46,41 +46,7 @@ const Intro = () => {
         }}>
           From Out to In: Where your every need finds its way home.
         </Typography>
-        <div style={{ display: 'flex', justifyContent: 'center', margin: '0 5%' }}>
-          <Autocomplete
-            id="free-solo-demo"
-            freeSolo
-            options={expertise.map((option) => option.label)}
-            style={{
-              width: '100%',
-              maxWidth: '800px',
-              borderRadius: '12px',
-            }}
-            PaperComponent={({ children }) => (
-              <Paper elevation={3} style={{ marginTop: '8px', width: 'auto', borderRadius: '12px' }}>
-                {children}
-              </Paper>
-            )}
-            renderInput={(params) => (
-              <TextField
-                {...params}
-                label="Tell us about your need"
-                variant="outlined"
-                style={{
-                  borderRadius: '12px',
-                  borderTopRightRadius: 0,
-                  borderBottomRightRadius: 0,
-                }}
-                InputProps={{
-                  style: { borderTopRightRadius: 0, borderBottomRightRadius: 0 },
-                  endAdornment: (
-                    <SearchIcon style={{ cursor: 'pointer', fontSize: 'clamp(1.5rem, 2vw, 2.5rem)', marginLeft: '-35px' }} />
-                  ),
-                }}
-              />
-            )}
-          />
-        </div>
+      
       </div>
     </div>
     </>
