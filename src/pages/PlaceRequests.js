@@ -11,6 +11,7 @@ import Cookies from "js-cookie";
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import { Typography } from "@mui/material";
+
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 const PlaceRequests = (props) => {
@@ -64,7 +65,7 @@ const formattedDateTime = `${hours}:${minutes} ${day}-${month}-${year}`;
     try {
       // API call to post the order data
       const response = await axios.post(
-        'http://localhost:8081/engineering/placeorder',
+        'https://gharaanah.onrender.com/engineering/placeorder',
         orderData,
         {
           headers: {
@@ -93,42 +94,49 @@ const formattedDateTime = `${hours}:${minutes} ${day}-${month}-${year}`;
 
       <div style={{ pointerEvents: 'auto' }}>
         
-        <Dialog open={open} PaperProps={{ component: 'form', onSubmit: handleSubmit }}>
-        <DialogTitle>
-          Place Order
-          <IconButton
-            aria-label="close"
-            onClick={handleClose}
-            sx={{
-              position: 'absolute',
-              right: 8,
-              top: 8,
-              color: (theme) => theme.palette.grey[500],
-            }}
-          >
-            <CloseIcon />
-          </IconButton>
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            Please enter the request.
-          </DialogContentText>
-          <TextField
-  id="order-details"
-  label="Order Details"
-  variant="outlined"
-  name="orderDetails" // Make sure this matches the property name in the state
-  value={orderData.orderDetails}
-  onChange={handleOrderDataChange}
-/>
-        
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button type="submit">Place Order</Button>
-        </DialogActions>
-      </Dialog>
-          
+      <Dialog open={open} PaperProps={{ component: 'form', onSubmit: handleSubmit }} style={{borderRadius:"200px"}}>
+  <DialogTitle>
+    Place Order
+    <IconButton
+      aria-label="close"
+      onClick={handleClose}
+      sx={{
+        position: 'absolute',
+        right: 8,
+        top: 8,
+        color: (theme) => theme.palette.grey[500],
+      }}
+    >
+      <CloseIcon />
+    </IconButton>
+  </DialogTitle>
+  <DialogContent>
+    <DialogContentText>
+      Please enter the request details.
+    </DialogContentText>
+    <TextField
+      id="order-details"
+      label="Request Details"
+      variant="outlined"
+      name="orderDetails"
+      value={orderData.orderDetails}
+      onChange={handleOrderDataChange}
+      fullWidth
+      multiline
+      rows={4}
+      style={{borderRadius:"200px"}}
+    />
+  </DialogContent>
+  <DialogActions>
+    <Button onClick={handleClose} color="secondary">
+      Cancel
+    </Button>
+    <Button type="submit" variant="contained" color="primary">
+      Place Order
+    </Button>
+  </DialogActions>
+</Dialog>
+
       </div>
     </>
   );

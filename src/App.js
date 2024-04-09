@@ -13,6 +13,7 @@ import Logout from "./pages/Logout";
 import CheckRequest from "./pages/CheckRequest";
 import BuddyRequests from "./pages/BuddyRequests";
 import StudentRequest from "./pages/StudentRequest";
+import StudentProfile from "./pages/StudentProfile";
 function App() {
   const [userStage, setUserStage] = useState(0);
   useEffect(() => {
@@ -69,6 +70,7 @@ function App() {
         <Route path="/checkrequest" element={userStage === 1 ?<CheckRequest />:<Navigate to ="/"/>}/>
         <Route path="/buddyrequest" element={<BuddyRequests/>}/> 
         <Route path="/studentrequest" element={<StudentRequest/>}/>
+        <Route path="/profile" element={<StudentProfile/>}/>
       </Routes>
     </>
   );

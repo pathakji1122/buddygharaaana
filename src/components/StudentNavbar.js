@@ -166,14 +166,14 @@ const StudentNavbar = () => {
               <MenuItem onClick={handleCloseMenu} component={NavLink} to="/studentrequest">
                 My Request
               </MenuItem>
-              <MenuItem onClick={handleCloseMenu} component={NavLink} to="/customerprofile">
+              <MenuItem onClick={handleCloseMenu} component={NavLink} to="/profile">
                 Profile
-              </MenuItem>
-              <MenuItem onClick={handleCloseMenu} component={NavLink} to="/logout">
-                Logout
               </MenuItem>
               <MenuItem onClick={handleCloseMenu} component={NavLink} to="/buddyrequest">
                 Buddy
+              </MenuItem>
+              <MenuItem onClick={handleCloseMenu} component={NavLink} to="/logout">
+                Logout
               </MenuItem>
             </Menu>
           </Box>

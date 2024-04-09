@@ -26,7 +26,8 @@ const EntryGate = () => {
 
     return (
         <>
-            <div style={{ marginTop: "100px" }}>
+           
+           <div style={{ marginTop: "100px" }}>
                 <Typography variant="h5" align="center" fontWeight="bold" sx={{ marginTop: "20px", color: "#333", margin: "20px" }}>
                     Our Services
                 </Typography>
@@ -34,139 +35,159 @@ const EntryGate = () => {
             <Box sx={{ width: '100%', backgroundColor: '#baf1f0', marginTop: "25px", marginBottom: "88px" }}>
                 <Grid container spacing={2} direction="row">
                     <Grid item xs={6} sm={6} md={3}>
-                        <Card style={{ height: "250px", borderRadius: "10px", boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.5)", margin: "auto", marginTop: "20px", display: "flex", flexDirection: "column" }}>
-                            <CardActionArea>
-                                <img
-                                    src={amazon}
-                                    alt="Amazon Parcel"
-                                    style={{ marginTop: "10px", marginLeft: "auto", marginRight: "auto", display: "block", objectFit: "cover", width: "80%", maxHeight: "150px" }}
-                                />
-                                <Typography variant="h6" component="div" style={{ fontSize: "0.67rem", color: "#333", textAlign: "center", fontWeight: "bold", marginTop: "10px", lineHeight: "0.8" }}>
-                                    Amazon Parcel
-                                </Typography>
-                            </CardActionArea>
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: "auto" }}>
-                            <Button
-                    disableElevation
-                    variant="contained"
-                    onClick={() => handleClick(amazonParcel)}
-                    sx={{
-                        textTransform: 'none',
-                        width: '100%',
-                    }}
-                >
-                    Order
-                </Button>
-                            </div>
-                        </Card>
+                    <Card style={{ height: "fit-content", borderRadius: "10px", boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.5)", margin: "auto", marginTop: "20px", display: "flex", flexDirection: "column" }}>
+    <CardActionArea style={{ flexGrow: 1 }}>
+        <img
+            src={amazon}
+            alt="Amazon Parcel"
+            style={{ marginTop: "10px", marginLeft: "auto", marginRight: "auto", display: "block", objectFit: "cover", width: "80%", maxHeight: "150px", borderRadius: "10px 10px 0 0" }}
+        />
+        <Typography variant="h6" component="div" style={{ fontSize: "1rem", color: "#333", textAlign: "center", fontWeight: "bold", marginTop: "10px", lineHeight: "1.2", padding: "0 10px" }}>
+            Amazon Parcel
+        </Typography>
+    </CardActionArea>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: "10px" }}>
+        <Button
+            disableElevation
+            variant="contained"
+            onClick={() => handleClick(amazonParcel)}
+            style={{
+                textTransform: 'none',
+                width: '100%',
+                backgroundColor: '#ff9900',
+                color: '#fff',
+                borderRadius: '10px'
+            }}
+        >
+            Order Now
+        </Button>
+    </div>
+</Card>
+
                     </Grid>
                     <Grid item xs={6} sm={6} md={3}>
-                        <Card style={{ height: "250px", borderRadius: "10px", boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.5)", margin: "auto", marginTop: "20px", display: "flex", flexDirection: "column" }}>
-                            <CardActionArea>
-                                <img
-                                    src={flipkart}
-                                    alt="flipkart"
-                                    style={{ marginTop: "10px", marginLeft: "auto", marginRight: "auto", display: "block", objectFit: "cover", width: "80%", maxHeight: "150px" }}
-                                />
-                                <Typography variant="h6" component="div" style={{ fontSize: "0.67rem", color: "#333", textAlign: "center", fontWeight: "bold", marginTop: "10px", lineHeight: "0.8" }}>
-                                    flipkart
-                                </Typography>
-                            </CardActionArea>
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: "auto" }}>
-                            <Button
-                    disableElevation
-                    variant="contained"
-                    onClick={() => handleClick(flipkartParcel)}
-                    sx={{
-                        textTransform: 'none',
-                        width: '100%',
-                    }}
-                >
-                    Order
-                </Button>
-                            </div>
-                        </Card>
+                    <Card style={{ height: "fit-content", borderRadius: "10px", boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.5)", margin: "auto", marginTop: "20px", display: "flex", flexDirection: "column" }}>
+    <CardActionArea style={{ flexGrow: 1 }}>
+        <img
+            src={flipkart}
+            alt="Amazon Parcel"
+            style={{ marginTop: "10px", marginLeft: "auto", marginRight: "auto", display: "block", objectFit: "cover", width: "80%", maxHeight: "150px", borderRadius: "10px 10px 0 0" }}
+        />
+        <Typography variant="h6" component="div" style={{ fontSize: "1rem", color: "#333", textAlign: "center", fontWeight: "bold", marginTop: "10px", lineHeight: "1.2", padding: "0 10px" }}>
+            Flipkart Parcel
+        </Typography>
+    </CardActionArea>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: "10px" }}>
+        <Button
+            disableElevation
+            variant="contained"
+            onClick={() => handleClick(flipkartParcel)}
+            style={{
+                textTransform: 'none',
+                width: '100%',
+                backgroundColor: '#ff9900',
+                color: '#fff',
+                borderRadius: '10px'
+            }}
+        >
+            Order Now
+        </Button>
+    </div>
+</Card>
+
                     </Grid>
                     <Grid item xs={6} sm={6} md={3}>
-                        <Card style={{ height: "250px", borderRadius: "10px", boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.5)", margin: "auto", marginTop: "20px", display: "flex", flexDirection: "column" }}>
-                            <CardActionArea>
-                                <img
-                                    src={samrat}
-                                    alt="Samrat store"
-                                    style={{ marginTop: "10px", marginLeft: "auto", marginRight: "auto", display: "block", objectFit: "cover", width: "80%", maxHeight: "150px" }}
-                                />
-                                <Typography variant="h6" component="div" style={{ fontSize: "0.67rem", color: "#333", textAlign: "center", fontWeight: "bold", marginTop: "10px", lineHeight: "0.8" }}>
-                                    Samrat store
-                                </Typography>
-                            </CardActionArea>
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: "auto" }}>
-                            <Button
-                    disableElevation
-                    variant="contained"
-                    onClick={() => handleClick(SamratShop)}
-                    sx={{
-                        textTransform: 'none',
-                        width: '100%',
-                    }}
-                >
-                    Order
-                </Button>
-                            </div>
-                        </Card>
+                    <Card style={{ height: "fit-content", borderRadius: "10px", boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.5)", margin: "auto", marginTop: "20px", display: "flex", flexDirection: "column" }}>
+    <CardActionArea style={{ flexGrow: 1 }}>
+        <img
+            src={samrat}
+            alt="Amazon Parcel"
+            style={{ marginTop: "10px", marginLeft: "auto", marginRight: "auto", display: "block", objectFit: "cover", width: "80%", maxHeight: "150px", borderRadius: "10px 10px 0 0" }}
+        />
+        <Typography variant="h6" component="div" style={{ fontSize: "1rem", color: "#333", textAlign: "center", fontWeight: "bold", marginTop: "10px", lineHeight: "1.2", padding: "0 10px" }}>
+          Samrat Store
+        </Typography>
+    </CardActionArea>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: "10px" }}>
+        <Button
+            disableElevation
+            variant="contained"
+            onClick={() => handleClick(samrat)}
+            style={{
+                textTransform: 'none',
+                width: '100%',
+                backgroundColor: '#ff9900',
+                color: '#fff',
+                borderRadius: '10px'
+            }}
+        >
+            Order Now
+        </Button>
+    </div>
+</Card>
+
                     </Grid>
                     <Grid item xs={6} sm={6} md={3}>
-                        <Card style={{ height: "250px", borderRadius: "10px", boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.5)", margin: "auto", marginTop: "20px", display: "flex", flexDirection: "column" }}>
-                            <CardActionArea>
-                                <img
-                                    src={joydip}
-                                    alt="john"
-                                    style={{ marginTop: "10px", marginLeft: "auto", marginRight: "auto", display: "block", objectFit: "cover", width: "80%", maxHeight: "150px" }}
-                                />
-                                <Typography variant="h6" component="div" style={{ fontSize: "0.67rem", color: "#333", textAlign: "center", fontWeight: "bold", marginTop: "10px", lineHeight: "0.8" }}>
-                                    Joydip
-                                </Typography>
-                            </CardActionArea>
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: "auto" }}>
-                            <Button
-                    disableElevation
-                    variant="contained"
-                    onClick={() => handleClick(JoyDip)}
-                    sx={{
-                        textTransform: 'none',
-                        width: '100%',
-                    }}
-                >
-                    Order
-                </Button>
-                            </div>
-                        </Card>
+                    <Card style={{ height: "fit-content", borderRadius: "10px", boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.5)", margin: "auto", marginTop: "20px", display: "flex", flexDirection: "column" }}>
+    <CardActionArea style={{ flexGrow: 1 }}>
+        <img
+            src={joydip}
+            alt="Amazon Parcel"
+            style={{ marginTop: "10px", marginLeft: "auto", marginRight: "auto", display: "block", objectFit: "cover", width: "80%", maxHeight: "70px", borderRadius: "10px 10px 0 0" }}
+        />
+        <Typography variant="h6" component="div" style={{ fontSize: "1rem", color: "#333", textAlign: "center", fontWeight: "bold", marginTop: "10px", lineHeight: "1.2", padding: "0 10px" }}>
+            Joydip
+        </Typography>
+    </CardActionArea>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: "10px" }}>
+        <Button
+            disableElevation
+            variant="contained"
+            onClick={() => handleClick(joydip)}
+            style={{
+                textTransform: 'none',
+                width: '100%',
+                backgroundColor: '#ff9900',
+                color: '#fff',
+                borderRadius: '10px'
+            }}
+        >
+            Order Now
+        </Button>
+    </div>
+</Card>
+
                     </Grid>
                     <Grid item xs={6} sm={6} md={3}>
-                        <Card style={{ height: "250px", borderRadius: "10px", boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.5)", margin: "auto", marginTop: "20px", display: "flex", flexDirection: "column" }}>
-                            <CardActionArea>
-                                <img
-                                    src={john}
-                                    alt="john"
-                                    style={{ marginTop: "10px", marginLeft: "auto", marginRight: "auto", display: "block", objectFit: "cover", width: "80%", maxHeight: "150px" }}
-                                />
-                                <Typography variant="h6" component="div" style={{ fontSize: "0.67rem", color: "#333", textAlign: "center", fontWeight: "bold", marginTop: "10px", lineHeight: "0.8" }}>
-                                    John
-                                </Typography>
-                            </CardActionArea>
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: "auto" }}>
-                            <Button
-                    disableElevation
-                    variant="contained"
-                    onClick={() => handleClick(JohnRestaurant)}
-                    sx={{
-                        textTransform: 'none',
-                        width: '100%',
-                    }}
-                >
-                    Order
-                </Button>
-                            </div>
-                        </Card>
+                    <Card style={{ height: "fit-content", borderRadius: "10px", boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.5)", margin: "auto", marginTop: "20px", display: "flex", flexDirection: "column" }}>
+    <CardActionArea style={{ flexGrow: 1 }}>
+        <img
+            src={john}
+            alt="Amazon Parcel"
+            style={{ marginTop: "10px", marginLeft: "auto", marginRight: "auto", display: "block", objectFit: "cover", width: "80%", maxHeight: "150px", borderRadius: "10px 10px 0 0" }}
+        />
+        <Typography variant="h6" component="div" style={{ fontSize: "1rem", color: "#333", textAlign: "center", fontWeight: "bold", marginTop: "10px", lineHeight: "1.2", padding: "0 10px" }}>
+           John
+        </Typography>
+    </CardActionArea>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: "10px" }}>
+        <Button
+            disableElevation
+            variant="contained"
+            onClick={() => handleClick(john)}
+            style={{
+                textTransform: 'none',
+                width: '100%',
+                backgroundColor: '#ff9900',
+                color: '#fff',
+                borderRadius: '10px'
+            }}
+        >
+            Order Now
+        </Button>
+    </div>
+</Card>
+
                     </Grid>
                     
                   
