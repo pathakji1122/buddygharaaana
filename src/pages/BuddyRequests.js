@@ -104,7 +104,7 @@ const BuddyRequests = () => {
 
     <Typography variant="body1" color="text.primary" sx={{ fontFamily: 'Cursive', fontWeight: 'bold', marginBottom: '10px' }}>
   <span style={{ fontSize: '0.8rem', marginRight: '5px', color: '#333', fontWeight: 'bold' }}>Type:</span> {order.orderNIT.type} 
-  <span style={{ fontSize: '0.8rem', marginLeft: '20px', marginRight: '5px', color: '#333', fontWeight: 'bold' }}>Store:</span> {order.storeName}
+  <span style={{ fontSize: '0.8rem', marginLeft: '20px', marginRight: '5px', color: '#333', fontWeight: 'bold' }}>Store:</span> {order.orderNit.storeName}
 </Typography>
     <Typography variant="body1" color="text.primary" sx={{ fontFamily: 'Cursive', fontWeight: 'bold', marginBottom: '10px' }}>
       <span style={{ fontSize: '0.8rem', marginRight: '5px', color: '#333', fontWeight: 'bold' }}>Order Details:</span> {order.orderNIT.orderDetails}
