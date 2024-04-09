@@ -116,6 +116,7 @@ const StudentRequest = () => {
 
    </CardContent>
    <CardActions>
+{order.orderStatus ==='ACCEPTED' &&
      <Button
        onClick={() => handleCompleteOtp(order.orderId)}
        variant="contained"
@@ -130,6 +131,7 @@ const StudentRequest = () => {
      >
      Get Otp
      </Button>
+}
    </CardActions>
  </Card>
  ))}
