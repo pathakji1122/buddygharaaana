@@ -44,8 +44,7 @@ const Intro = () => {
           fontSize: "clamp(1.5rem, 3vw, 2rem)", // Responsive font size
           fontFamily: "Arial",
         }}>
-         Why ask someone ,Use gharaana get your buddy
-         Special one for Nita
+         Why rely on others when Gharaana is at your service? Secure your items from your Buddy today!
         </Typography>
       
       </div>
