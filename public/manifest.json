@@ -1,20 +1,20 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Buddy",
+  "name": "Gharaana for Nita known as Buddy",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "src/images/Firefly logo with G letter and a house and a person 82525.jpg",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/jpg"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
+      "src": "src/images/Firefly logo with G letter and a house and a person 82525.jpg",
+      "type": "image/jpg",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
-      "type": "image/png",
+      "src": "src/images/Firefly logo with G letter and a house and a person 82525.jpg",
+      "type": "image/jpg",
       "sizes": "512x512"
     }
   ],
