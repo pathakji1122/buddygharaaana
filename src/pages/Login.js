@@ -46,7 +46,7 @@ const Login = ({ onLogin }) => {
       else if (response.data.action === false) {
        setRegistrationError(response.data.response);
        setUser({
-        email: "",
+        phoneNo: "",
         password: "",
       });
       }
@@ -55,7 +55,7 @@ const Login = ({ onLogin }) => {
       console.error('Error sending data:', error);
       setRegistrationError("Error ");
       setUser({
-        email: "",
+        phoneNo: "",
         password: "",
       });
       // Handle error, like showing an error message
