@@ -37,14 +37,15 @@ const Intro = () => {
           fontSize: "clamp(2rem, 5vw, 3.5rem)", // Responsive font size
           margin: "0 5%",
         }}>
-          Gharaana
+        Buddy  Gharaana
         </Typography>
         <Typography variant="h6" style={{
           marginBottom: "20px",
           fontSize: "clamp(1.5rem, 3vw, 2rem)", // Responsive font size
           fontFamily: "Arial",
         }}>
-          From Out to In: Where your every need finds its way home.
+         Why ask someone ,Use gharaana get your buddy
+         Special one for Nita
         </Typography>
       
       </div>
