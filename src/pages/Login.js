@@ -53,7 +53,7 @@ const Login = ({ onLogin }) => {
 
     } catch (error) {
       console.error('Error sending data:', error);
-      setRegistrationError("Error ");
+      setRegistrationError("Please Signup and login then");
       setUser({
         phoneNo: "",
         password: "",
