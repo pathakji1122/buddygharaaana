@@ -9,9 +9,6 @@ import DialogTitle from '@mui/material/DialogTitle';
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useLocation, useNavigate } from 'react-router-dom';
-
-import { Typography } from "@mui/material";
-
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 const PlaceRequests = (props) => {
@@ -43,7 +40,6 @@ const formattedDateTime = `${hours}:${minutes} ${day}-${month}-${year}`;
       [name]: value,
     }));
   };
-
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -79,7 +75,7 @@ const formattedDateTime = `${hours}:${minutes} ${day}-${month}-${year}`;
         window.alert("Order Successful");
         handleClose(); // Close the dialog on successful submission
       } else {
-        window.alert("Order failed. Try again.");
+        window.alert("Logout and Login. Try again.");
       }
     } catch (error) {
       console.error('Error sending data:', error);

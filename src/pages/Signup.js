@@ -22,7 +22,8 @@ const SignUp = () => {
   const [registrationError, setRegistrationError] = React.useState(null);
   const Hostel = [
     "Aryabhatta",
-    "RNT"
+    "RNT",
+    "Gargi"
   ];
   const Branch = [
     "Computer Science",

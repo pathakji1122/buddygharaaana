@@ -49,6 +49,7 @@ const CompleteRequest = ({ orderId }) => {
       );
       if(response.data.action === true){
         setCompleted(true);
+
         console.log("Order completed successfully", response.data);
       } else {
         setError(response.data.response);

@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Paper, TextField, Autocomplete, useTheme } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import home from "../images/Firefly an illustration of a welcoming doorway with icons representing different home services float.jpg";
+import logo from "../images/Firefly logo with G letter and a house and a person 82525.jpg";
 
 const Intro = () => {
   const expertise = [{ label: 'Electrician' }];
@@ -21,7 +21,7 @@ const Intro = () => {
         borderRadius: "20px",
        
       }}>
-        <img src={home} alt="Background" style={{
+        <img src={logo} alt="Background" style={{
           width: "100%",
           maxWidth:"1000px",
           height: "100%",

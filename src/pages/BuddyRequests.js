@@ -31,7 +31,7 @@ const BuddyRequests = () => {
     try {
       const authToken = Cookies.get("authToken");
       const response = await axios.get(
-        "https://gharaanah.onrender.com/engineering/buddy",
+        "http://localhost:8081/engineering/buddy",
         {
           headers: {
             Authorization: `Bearer ${authToken}`,
@@ -51,7 +51,7 @@ const BuddyRequests = () => {
     try {
       const authToken = Cookies.get("authToken");
       const response = await axios.get(
-        "https://gharaanah.onrender.com/customer/myorder",
+        "https://gharaanah.onrender.com/engineering/buddy",
         {
           headers: {
             Authorization: `Bearer ${authToken}`,
