@@ -32,7 +32,7 @@ const StudentRequest = () => {
     try {
       const authToken = Cookies.get("authToken");
       const response = await axios.get(
-        "http://localhost:8081/engineering/studentrequest",
+        "https://gharaanah.onrender.com/engineering/studentrequest",
         {
           headers: {
             Authorization: `Bearer ${authToken}`,
