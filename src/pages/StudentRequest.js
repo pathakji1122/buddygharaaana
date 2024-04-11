@@ -13,8 +13,9 @@ import flipkart from "../images/flipkar.jpg";
 import JoyDip from "../images/2022-09-16.jpg";
 import John from "../images/jhon.jpg";
 import samratBazaar from "../images/samratbazaar.jpg";
+import CancelRequest from "../components/CancelRequest";
 const StudentRequest = () => {
-  const [orderStatusId,SetOrderStatusId]=useState(null);
+  const [orderCancelId,SetOrderCancelId]=useState(null);
   const[getOtpOrderId,setGetOtpOrderId]=useState(null);
   const [orders, setOrders] = useState([]);
   useEffect(() => {
@@ -66,6 +67,9 @@ const StudentRequest = () => {
   const handleCompleteOtp = (orderId) => {
     setGetOtpOrderId(orderId);
   };
+  const handleOrderCancel = (orderId) => {
+    SetOrderCancelId(orderId);
+  };
 
   return (
     <div>
@@ -109,20 +113,38 @@ const StudentRequest = () => {
        <span style={{ fontSize: '0.8rem', marginRight: '5px', color: '#333', fontWeight: 'bold' }}>Order Time:</span> {order.orderTime}
      </Typography>
     
-     {order.orderStatus !== 'NOT_ACCEPTED' && (
+     {order.orderStatus !== 'NOT_ACCEPTED' && order.orderStatus !== 'CANCELLED' && (
   <Typography variant="body1" color="text.primary" sx={{ fontFamily: 'Cursive', fontWeight: 'bold', marginBottom: '10px' }}>
     <span style={{ fontSize: '0.8rem', marginRight: '5px', color: '#333', fontWeight: 'bold' }}>Your Buddy:</span> {order.buddy.name} ,  {order.buddy.phoneNo}
   </Typography>
 )}
-     <Typography variant="body1" color="text.primary" sx={{ fontFamily: 'Cursive', fontWeight: 'bold', marginBottom: '10px' }}>
-  <span style={{ fontSize: '0.8rem', marginRight: '5px', color: '#333', fontWeight: 'bold' }}>Order Status:</span>
-  {order.orderStatus === 'NOT_ACCEPTED' ? 'Placed' : order.orderStatus === 'COMPLETED' ? 'Completed' : 'Accepted'}
-</Typography>
 
+<Typography variant="body1" color="text.primary" sx={{ fontFamily: 'Cursive', fontWeight: 'bold', marginBottom: '10px' }}>
+  <span style={{ fontSize: '0.8rem', marginRight: '5px', color: '#333', fontWeight: 'bold' }}>Order Status:</span>
+  {order.orderStatus === 'CANCELLED' ? 'Cancelled' : 
+    (order.orderStatus === 'NOT_ACCEPTED' ? 'Placed' : 
+      (order.orderStatus === 'COMPLETED' ? 'Completed' : 'Accepted'))}
+</Typography>
 
 
    </CardContent>
    <CardActions>
+   {order.orderStatus ==='NOT_ACCEPTED' &&
+     <Button
+       onClick={() => handleOrderCancel(order.orderId)}
+       variant="contained"
+       sx={{
+         borderRadius: '5px',
+         backgroundColor: '#76FF7A',
+         color: 'white',
+         fontWeight: 'bold',
+         cursor: 'pointer',
+         transition: 'background-color 0.3s ease',
+       }}
+     >
+      Cancel Order
+     </Button>
+}
 {order.orderStatus ==='ACCEPTED' &&
      <Button
        onClick={() => handleCompleteOtp(order.orderId)}
@@ -144,6 +166,7 @@ const StudentRequest = () => {
  ))}
         
         {getOtpOrderId && <Otp orderId={getOtpOrderId} />} 
+        {orderCancelId && <CancelRequest orderId={orderCancelId} />} 
      </div>
    
   );

@@ -18,7 +18,7 @@ const Footer = () => {
         display: 'flex',
         justifyContent: 'center',
         flexDirection: 'column',
-        ' @media(max-width:479px)': { fontSize: '14px' },
+        ' @media(max-width:489px)': { fontSize: '14px' },
       }}>
       <Grid
         container

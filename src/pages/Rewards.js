@@ -17,14 +17,14 @@ const Rewards = () => {
         try {
             const authToken = Cookies.get("authToken");
             const response = await axios.get(
-                "https://gharaanah.onrender.com/engineering/profile",
+                "https://gharaanah.onrender.com/engineering/rewards",
                 {
                     headers: {
                         Authorization: `Bearer ${authToken}`,
                     },
                 }
             );
-            setProfile(response.data.student);
+            setProfile(response.data.coin);
         
         } catch (error) {
             console.error("Error fetching profile:", error);
