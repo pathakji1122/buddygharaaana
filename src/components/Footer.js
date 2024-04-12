@@ -274,7 +274,7 @@ const Footer = () => {
         sx={{
           backgroundColor: '#333333',
           padding: '10px',
-          width: '100%',
+          width: '92%',
           textAlign: 'center',
           display: 'inline-block',
         }}>
@@ -290,7 +290,7 @@ const Footer = () => {
             color: 'rgb(255, 255, 255)',
             display: 'inline',
             marginLeft: '3px',
-            ' @media(max-width:479px)': { fontSize: '12px' },
+            ' @media(max-width:459px)': { fontSize: '12px' },
             '&&': { marginLeft: '3px' },
           }}>
           2024 Gharaana
@@ -303,7 +303,7 @@ const Footer = () => {
             cursor: 'pointer',
             display: 'inline',
             padding: '0px 5px',
-            ' @media(max-width:479px)': { fontSize: '12px' },
+            ' @media(max-width:459px)': { fontSize: '12px' },
           }}>
           Terms of Use
         </Link>
@@ -312,7 +312,7 @@ const Footer = () => {
           sx={{
             color: 'rgb(255, 255, 255)',
             display: 'inline',
-            ' @media(max-width:479px)': { fontSize: '12px' },
+            ' @media(max-width:459px)': { fontSize: '12px' },
           }}>
           and
         </Typography>
@@ -323,12 +323,13 @@ const Footer = () => {
             cursor: 'pointer',
             display: 'inline',
             padding: '0px 5px',
-            ' @media(max-width:479px)': { fontSize: '12px' },
+            ' @media(max-width:459px)': { fontSize: '12px' },
           }}>
           Privacy Policy
         </Link>
       </Box>
     </Box>
+    
   );
 };
 

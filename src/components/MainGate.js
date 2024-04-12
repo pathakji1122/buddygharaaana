@@ -193,7 +193,7 @@ const MainGate = () => {
                   
                 </Grid>
             </Box>
-            <Stack
+            {/* <Stack
                     sx={{
                         alignItems: 'center',
                         width: '50%',
@@ -261,7 +261,7 @@ const MainGate = () => {
                         </Button>
                        
                     </Stack>
-                </Stack>
+                </Stack> */}
         </>
     )
 }

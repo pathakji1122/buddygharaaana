@@ -10,7 +10,9 @@ import Card from "@mui/material/Card";
 import { Typography } from '@mui/material';
 import Button from "@mui/material/Button";
 import { useRef } from "react";
+import SignUpOtp from "../components/SignUpOtp";
 const SignUp = () => {
+  const [nit,setNit]=useState(null);
   const [selectedBranch, setSelectedBranch] = useState(null);
   const [selectedYear, setSelectedYear] = useState(null);
   const [selectedHostel, setSelectedHostel] = useState(null);
@@ -77,26 +79,10 @@ const SignUp = () => {
         studentData
       );
 
-      if (response.data.action === true) {
-        console.log('Data sent successfully:', response.data);
-        setStudent({
-          name: "",
-          year: "",
-          phoneNo: "",
-          password: "",
-          branch: "",
-          hostel:"",
-          enrollmentNo:""
-        });
-        
-        setSelectedHostel(null); 
-        setSelectedBranch(null);
-        setSelectedYear(null);
-        hostelInputRef.current.value = "";
-        branchInputRef.current.value="";
-        yearInputRef.current.value="";
-        setRegistrationSuccess(response.data.response);
+      if (response.data.action === true ) {
+                setNit(studentData);
       } else if (response.data.action === false) {
+
          setSelectedHostel(null); 
          setSelectedBranch(null);
          setSelectedYear(null);
@@ -518,6 +504,7 @@ const SignUp = () => {
   
             </Card>   
             </div>
+            {nit && <SignUpOtp nitStudent={nit} />} 
         </>
  
   
