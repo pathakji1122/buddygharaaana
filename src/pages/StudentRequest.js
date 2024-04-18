@@ -52,7 +52,7 @@ const StudentRequest = () => {
     try {
       const authToken = Cookies.get("authToken");
       const response = await axios.get(
-        "https://gharaanah.onrender.com/customer/myorder",
+        "https://gharaanah.onrender.com/engineering/studentrequest",
         {
           headers: {
             Authorization: `Bearer ${authToken}`,
@@ -113,7 +113,7 @@ const StudentRequest = () => {
        <span style={{ fontSize: '0.8rem', marginRight: '5px', color: '#333', fontWeight: 'bold' }}>Order Time:</span> {order.orderTime}
      </Typography>
     
-     {order.orderStatus !== 'NOT_ACCEPTED' && order.orderStatus !== 'CANCELLED' && (
+     {order.orderStatus == 'ACCEPTED' && order.orderStatus == 'COMPLETED'  && (
   <Typography variant="body1" color="text.primary" sx={{ fontFamily: 'Cursive', fontWeight: 'bold', marginBottom: '10px' }}>
     <span style={{ fontSize: '0.8rem', marginRight: '5px', color: '#333', fontWeight: 'bold' }}>Your Buddy:</span> {order.buddy.name} ,  {order.buddy.phoneNo}
   </Typography>
@@ -123,7 +123,8 @@ const StudentRequest = () => {
   <span style={{ fontSize: '0.8rem', marginRight: '5px', color: '#333', fontWeight: 'bold' }}>Order Status:</span>
   {order.orderStatus === 'CANCELLED' ? 'Cancelled' : 
     (order.orderStatus === 'NOT_ACCEPTED' ? 'Placed' : 
-      (order.orderStatus === 'COMPLETED' ? 'Completed' : 'Accepted'))}
+    (order.orderStatus === 'TIME_OUT' ? 'Order Timeout' : 
+      (order.orderStatus === 'COMPLETED' ? 'Completed' : 'Accepted')))}
 </Typography>
 
 

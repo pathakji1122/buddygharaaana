@@ -14,6 +14,7 @@ import CloseIcon from '@mui/icons-material/Close';
 const PlaceRequests = (props) => {
   const authToken = Cookies.get('authToken');
   const location = useLocation();
+  
   const data = location.state;
   const currentDate = new Date();
 
@@ -127,7 +128,7 @@ const formattedDateTime = `${hours}:${minutes} ${day}-${month}-${year}`;
     <Button onClick={handleClose} color="secondary">
       Cancel
     </Button>
-    <Button type="submit" variant="contained" color="primary">
+    <Button type="submit" variant="contained" color="primary"  disabled={loading}>
       Place Order
     </Button>
   </DialogActions>

@@ -116,7 +116,7 @@ const CheckRequest = () => {
       <span style={{ fontSize: '0.8rem', marginRight: '5px', color: '#333', fontWeight: 'bold' }}>Order Time:</span> {order.orderNIT.orderTime}
     </Typography>
     <Typography variant="body1" color="text.primary" sx={{ fontFamily: 'Cursive', fontWeight: 'bold', marginBottom: '10px' }}>
-      <span style={{ fontSize: '0.8rem', marginRight: '5px', color: '#333', fontWeight: 'bold' }}>Requested by:</span> {order.student.name},{order.student.phoneNo}
+      <span style={{ fontSize: '0.8rem', marginRight: '5px', color: '#333', fontWeight: 'bold' }}>Requested by:</span> {order.student.name},{order.student.phoneNo},{order.student.enrollmentNo}
     </Typography>
   </CardContent>
   <CardActions>
