@@ -206,7 +206,7 @@ const Footer = () => {
                 cursor: 'pointer',
               }}>
               Contact Us
-              Gharaana@ind.com
+              prateekprakash11@gmail.com
             </Link>
             <Stack
               sx={{
